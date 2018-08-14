@@ -49,7 +49,7 @@ def get_disk_info():
 	return dict(disk_total=disk_total,disk_percent=disk_percent,disk_free=disk_free,disk_used=disk_used)
 
 def get_boot_info():
-	boot_time = datetime.fromtimestamp(1531900106.0).strftime("%Y-%m-%d %H:%M:%S")
+	boot_time = datetime.fromtimestamp(psutil.boot_time()).strftime("%Y-%m-%d %H:%M:%S")
 	return dict(boot_time = boot_time)
 
 
